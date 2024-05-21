@@ -23,15 +23,17 @@ export const columns = [
   }),
   columnHelper.accessor('email', {
     header: () => 'Email',
-    cell: info => info.renderValue(),
+    cell: info => info.getValue(),
     footer: info => info.column.id,
   }),
   columnHelper.accessor('gender', {
     header: () => <span>Gender</span>,
+    cell: info => info.getValue(),
     footer: info => info.column.id,
   }),
   columnHelper.accessor('ip_address', {
     header: 'Ip Address',
+    cell: info => info.getValue(),
     footer: info => info.column.id,
   }),
 
